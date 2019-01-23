@@ -22,13 +22,13 @@ else
 endif
 
 
-all: lib copylib clean
+all: lib move clean
 
 lib: sccp.o
 	$(CXX) -o libsccp.$(DLLEXT) $(DLLOPT) $(CXXFLAGS) $(LDFLAGS) sccp.cpp $(LIBS)
 
-copylib:
-	cp libsccp.$(DLLEXT) lib/
+move:
+	mv libsccp.$(DLLEXT) lib/
 
 clean:
 	rm -rf *.o *.dSYM *.dylib sccp

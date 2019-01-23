@@ -1,0 +1,9 @@
+version: '3'
+services:
+  sccpbuild:
+    build:
+      context: .
+      dockerfile: ./Dockerfile.build
+    command: ["sh", "-c", "cp /build/sccplib/lib/* /local/lib"]
+    volumes:
+      - .:/local
