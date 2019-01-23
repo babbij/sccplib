@@ -1,0 +1,4 @@
+/sccp
+*.o
+*.dylib
+*.dSYM
