@@ -1,4 +1,5 @@
-/sccp
+lib/
 *.o
+*.so
 *.dylib
 *.dSYM
