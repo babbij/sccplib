@@ -4,6 +4,6 @@ services:
     build:
       context: .
       dockerfile: ./Dockerfile.build
-    command: ["sh", "-c", "cp /build/sccplib/lib/* /local/lib"]
+    command: ["sh", "-c", "/build/sccplib/copylibs.sh"]
     volumes:
-      - .:/local
+      - .:/host
